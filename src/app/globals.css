@@ -1,8 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+body {
+  /* color: var(--foreground);
+  background: var(--background); */
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer utilities {
+  .container {
+    @apply rounded-xl bg-gray-300/15 pt-2 lg:pt-4;
+  }
+  .tableTopNav {
+    @apply flex flex-col md:flex-row justify-center md:items-center md:justify-between mt-2 lg:mt-10 mb-1 lg:mb-4 w-[100%] lg:w-[96%] mx-auto;
+  }
+  .filtersGroup {
+    @apply flex self-start;
+  }
+  .actionsGroup {
+    @apply self-end flex items-center justify-center gap-0 md:gap-2 lg:gap-4;
+  }
+}
+
+
+
+
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -12,16 +44,4 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+}*/
